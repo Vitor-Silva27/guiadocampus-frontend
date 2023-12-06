@@ -1,0 +1,12 @@
+.headerContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.theme {
+    margin-left: auto;
+}
+
