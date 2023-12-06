@@ -1,0 +1,28 @@
+.container{
+    width: 8.75rem;
+    height: 8.75rem;
+    background: var(--gray-100);
+    border-radius: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.main{
+    background-color: var(--main-color-400);
+}
+
+.main p {
+    color: var(--gray-100);
+}
+
+.image svg {
+    fill: var(--gray-100);
+}
