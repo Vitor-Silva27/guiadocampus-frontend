@@ -1,6 +1,6 @@
 .container{
-    width: 8.75rem;
-    height: 8.75rem;
+    width: 10rem;
+    height: 10rem;
     background: var(--gray-100);
     border-radius: 1.25rem;
     display: flex;
@@ -21,8 +21,4 @@
 
 .main p {
     color: var(--gray-100);
-}
-
-.image svg {
-    fill: var(--gray-100);
 }

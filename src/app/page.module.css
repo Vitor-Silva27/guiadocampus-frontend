@@ -1,3 +1,11 @@
+.homeContainer {
+    padding-top: 2rem;
+}
+
 .mainTitle {
     margin: 3rem 0 1.9rem 0;
+}
+
+.mainCardsContainer {
+    margin-top: 3rem;
 }
