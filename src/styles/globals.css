@@ -19,13 +19,14 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    color: var(--gray-800);
 }
 body {
     margin: 2rem;
+    background-color: var(--gray-300);
 }
 .title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 120%; /* 1.8rem */
 }
