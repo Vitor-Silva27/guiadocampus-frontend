@@ -8,4 +8,8 @@
 
 .mainCardsContainer {
     margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    justify-content: space-between;
 }

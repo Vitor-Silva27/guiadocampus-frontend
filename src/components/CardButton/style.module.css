@@ -1,5 +1,5 @@
 .container{
-    width: 10rem;
+    width: 100%;
     height: 10rem;
     background: var(--gray-100);
     border-radius: 1.25rem;
@@ -21,4 +21,11 @@
 
 .main p {
     color: var(--gray-100);
+}
+
+@media (min-width: 380px) {
+    .container {
+        width: 10rem;
+        height: 10rem;
+    }
 }
