@@ -5,13 +5,16 @@
 }
 
 .searchInput {
-    width: 18.75rem;
     height: 2.8125rem;
-    border-radius: 3.125rem 0 0 3.125rem;
+    border-radius: 3.125rem;
     border: none;
     background-color: var(--gray-100);
-    width: 95%;
+    width: 100%;
     padding-left: 1.75rem;
+}
+
+.searchInput:focus {
+    outline: 2px solid var(--main-color-400);
 }
 
 .searchInput::placeholder {
