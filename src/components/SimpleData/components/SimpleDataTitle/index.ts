@@ -1,0 +1,1 @@
+export { SimpleDataTitle } from "./SimpleDataTitle";

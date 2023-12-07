@@ -1,0 +1,13 @@
+.intro{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    row-gap: 1rem;
+}
+.generalInfoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1.4rem;
+}

@@ -8,7 +8,7 @@ type SearchBarProps = {
 export const SearchBar = ({text}: SearchBarProps) => {
   return (
     <div className={style.searchContainer}>
-      <input className={style.searchInput} type='search' placeholder={text} />
+      <input className={style.searchInput} type='text' placeholder={text} />
       <div className={style.searchButton}><Image src="assets/icone-pesquisa.svg" alt='search icon' width={24} height={24} /></div>
     </div>
   );

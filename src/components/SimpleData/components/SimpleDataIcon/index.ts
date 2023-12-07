@@ -1,0 +1,1 @@
+export { SimpleDataIcon } from "./SimpleDataIcon";
