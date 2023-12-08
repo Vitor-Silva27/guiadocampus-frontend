@@ -1,0 +1,13 @@
+.ctaText {
+    color: var(--gray-100);
+}
+
+.ctaContainer {
+    display: flex;
+    width: 18.6875rem;
+    padding: 1.25rem 3.4375rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3125rem;
+    background: var(--main-color-400);
+}

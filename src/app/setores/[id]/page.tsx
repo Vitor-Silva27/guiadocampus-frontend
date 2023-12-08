@@ -1,12 +1,15 @@
 import { SimpleData } from '@/components/SimpleData';
 import styles from './page.module.css';
 import { HeaderWithReturn } from "@/components/HeaderWithReturn";
+import { Contact } from '@/components/Contact';
+import { CardButton } from '@/components/CardButton';
+import { Cta } from '@/components/Cta';
 
 export default function Sector() {
     return (
       <>
         <HeaderWithReturn returnLink="/setores"/>
-        <div className={styles.intro}>
+        <div className={`${styles.section} ${styles.intro}`}>
             <h1 className="title">Biblioteca</h1>
             <p className={`body-text`}>
                 A Biblioteca do Instituto Federal – Campus Pedro II é tecnicamente responsável
@@ -14,7 +17,7 @@ export default function Sector() {
                 pesquisa e extensão da comunidade interna da Instituição.
             </p>
         </div>
-        <section className='generalInfo'>
+        <section className={`${styles.section}`}>
             <h2 className="subtitle-1">Informações gerais</h2>
             <div className={styles.generalInfoList}>
               <SimpleData.Root>
@@ -48,10 +51,20 @@ export default function Sector() {
             </div>
         </section>
 
-        <section>
+        <section className={`${styles.section}`}>
           <h2 className="subtitle-1">Contatos</h2>
-
+          <Contact />
         </section>
+
+        <section className={`${styles.section} ${styles.cardsSection}`}>
+          <CardButton title='Baixar quadro de horários' icon='/assets/clock-dark.svg' link='' main/>
+          <CardButton title='Ver normas' icon='/assets/doc-light.svg' link=''/>
+        </section>
+
+        <div className={styles.buttonContainer}>
+            <Cta text='Serviços e protocolos' link=''/>
+        </div>
+
       </>
     );
   }
