@@ -1,6 +1,24 @@
 .container {
     display: flex;
-    column-gap: 0.875rem;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.contactData {
+    display: flex;
     align-items: center;
     justify-content: flex-start;
+    column-gap: 0.5rem;
+}
+
+.contactLink {
+    color: var(--main-color-400);
+}
+
+.contactsDataWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
 }
