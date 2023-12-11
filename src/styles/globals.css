@@ -24,7 +24,15 @@
 body {
     margin: 2rem;
     background-color: var(--gray-300);
+    display: flex;
+    justify-content: center;
 }
+
+.app-container {
+    width: 100%;
+    max-width: 720px;
+}
+
 .title {
     font-size: 1.7rem;
     font-weight: 500;

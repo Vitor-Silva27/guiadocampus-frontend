@@ -3,11 +3,11 @@
 import { HeaderWithReturn } from '@/components/HeaderWithReturn';
 import styles from './page.module.css';
 import { SearchBar } from '@/components/SearchBar';
-import { SectorCard } from '@/components/SectorCard';
+import { Card } from '@/components/Card';
 import { useFetch } from '@/services/useFetch';
 import { ISimpleSector } from '@/services/api/types/ISector';
 
-export default function Setores() {
+export default function Sectors() {
   const { data } = useFetch<ISimpleSector[]>("http://localhost:3000/sectors");
 
   return (
@@ -17,7 +17,7 @@ export default function Setores() {
       <section className={styles.sectorsList}>
         {data ? (
           data.map(setor => (
-            <SectorCard key={setor.id} icon={setor.icon} name={setor.name} id={setor.id}/>
+            <Card key={setor.id} icon={setor.icon} name={setor.name} id={setor.id} link='/setores'/>
           ))
         ) : (
           <p>Carregando...</p>

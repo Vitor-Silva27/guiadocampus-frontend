@@ -10,10 +10,10 @@ export default function Home() {
       <h1 className={`title ${styles.mainTitle}`}>Explore os setores do campus</h1>
       <SearchBar text='Pesquisar...'/>
       <div className={styles.mainCardsContainer}>
-          <CardButton link='./setores' title='Setores' icon='hat' main/>
+          <CardButton link='/setores' title='Setores' icon='hat' main/>
           <CardButton link='https://www.google.com' title='Horários' icon='clock'/>
           <CardButton link='https://www.google.com' title='Mapa' icon='map'/>
-          <CardButton link='https://www.google.com' title='Protocolos' icon='doc'/>
+          <CardButton link='/servicos' title='Protocolos' icon='doc'/>
       </div>
     </div>
   );

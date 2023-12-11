@@ -10,8 +10,8 @@ export const Contact = ({title, responsible, email,phone}: ISectorContacts) => {
           <h4 className='body-text'>{responsible}</h4>
           <ul className={style.contactsDataWrapper}>
             {email && (
-              <li className={style.contactData}>
-                <a href={`mailto:${email}`}>
+              <li>
+                <a href={`mailto:${email}`} className={style.contactData}>
                   <MdOutlineEmail className={style.icon}/>
                   <p className={`body-text ${style.contactLink}`}>{email}</p>
                 </a>
