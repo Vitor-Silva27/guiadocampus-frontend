@@ -1,20 +1,28 @@
 import Image from 'next/image';
 import style from './style.module.css';
+import { ISectorContacts } from '@/services/api/types/ISector';
+import { MdOutlineEmail, MdPhone} from 'react-icons/md';
 
-export const Contact = () => {
+export const Contact = ({title, responsible, email,phone}: ISectorContacts) => {
     return (
       <div className={style.container}>
-          <h3 className='subtitle-2'>Coordenação de ADS</h3>
-          <h4 className='body-text'>Coordenador: Paulo de Oliveira Gomes Filho</h4>
+          <h3 className='subtitle-2'>{title}</h3>
+          <h4 className='body-text'>{responsible}</h4>
           <ul className={style.contactsDataWrapper}>
-            <li className={style.contactData}>
-              <Image className={style.icon} src={"/assets/email.svg"} width={24} height={24} alt='' />
-              <p className={`body-text ${style.contactLink}`}>biblioteca.capedii@ifpi.edu.br</p>
-            </li>
-            <li className={style.contactData}>
-              <Image className={style.icon} src={"/assets/email.svg"} width={24} height={24} alt='' />
-              <p className={`body-text ${style.contactLink}`}>biblioteca.capedii@ifpi.edu.br</p>
-            </li>
+            {email && (
+              <li className={style.contactData}>
+                <a href={`mailto:${email}`}>
+                  <MdOutlineEmail className={style.icon}/>
+                  <p className={`body-text ${style.contactLink}`}>{email}</p>
+                </a>
+              </li>
+            )}
+              {phone && (
+              <li className={style.contactData}>
+                  <MdPhone className={style.icon} />
+                  <p className={`body-text ${style.contactLink}`}>{phone}</p>
+              </li>
+              )}
           </ul>
       </div>
     );

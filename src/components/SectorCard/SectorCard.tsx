@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import style from './style.module.css';
-import Image from 'next/image';
+import { icons } from '@/styles/icons';
+import { RiArrowRightSLine } from 'react-icons/ri';
 
 type SectorCardProps = {
     id: string;
@@ -9,13 +10,14 @@ type SectorCardProps = {
 }
 
 export const SectorCard = ({ id, name, icon }: SectorCardProps) => {
+  const Icon = icons[icon];
   return (
     <Link className={`${style.container}`} href={`./setores/${id}`}>
-            <Image className={style.backgroundIcon} src={icon} width={45} height={45} alt='' />
+            <Icon className={style.backgroundIcon} />
             <div className={style.dataWrapper}>
-                <Image src={icon} width={32} height={32} alt='' />
+                <Icon className={style.icon} />
                 <p className={`subtitle-1 ${style.sectorName}`}>{name}</p>
-                <Image src="./assets/arrow-right.svg" width={24} height={24} alt='' className={style.arrow}/>
+                <RiArrowRightSLine className={style.arrow}/>
             </div>
     </Link>
   )

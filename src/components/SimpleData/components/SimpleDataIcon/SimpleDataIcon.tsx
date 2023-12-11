@@ -1,7 +1,8 @@
-import Image from "next/image";
-
+import { icons } from '@/styles/icons';
+import style from './style.module.css';
 export const SimpleDataIcon = ({icon}:{icon: string}) => {
+  const Icon = icons[icon];
   return (
-    <Image src={icon} width={32} height={32} alt="" />
+    <Icon className={style.icon} />
   );
 }

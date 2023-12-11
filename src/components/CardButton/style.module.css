@@ -6,6 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    padding: 1rem;
+    min-width: 10rem;
 }
 
 .dataWrapper {
@@ -22,6 +25,16 @@
 
 .main p {
     color: var(--gray-100);
+}
+.icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--gray-600);
+    stroke: var(--gray-600);
+}
+
+.main .icon {
+    fill: var(--gray-100)
 }
 
 @media (min-width: 380px) {

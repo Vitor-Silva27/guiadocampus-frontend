@@ -1,0 +1,1 @@
+export { SectorDescription } from "./SectorDescription";
