@@ -7,7 +7,7 @@ import {
 import { IoDocumentOutline, IoPersonOutline } from "react-icons/io5";
 import { BsBook, BsCalendarCheck, BsClock } from "react-icons/bs";
 import { CiMap } from "react-icons/ci";
-import { PiBooks } from "react-icons/pi";
+import { PiBooks, PiPresentationLight } from "react-icons/pi";
 import { SiGoogleclassroom } from "react-icons/si";
 
 export const icons: { [key: string]: IconType } = {
@@ -22,4 +22,5 @@ export const icons: { [key: string]: IconType } = {
   shelf: PiBooks,
   class: SiGoogleclassroom,
   person: IoPersonOutline,
+  presentation: PiPresentationLight,
 };

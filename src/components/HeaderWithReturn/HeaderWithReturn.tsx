@@ -1,16 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import style from './style.module.css';
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-type HeaderProps = {
-  returnLink: string;
-}
-export const HeaderWithReturn = ({returnLink}:HeaderProps) => {
+export const HeaderWithReturn = () => {
+  const router = useRouter();
   return (
     <header className={style.headerContainer}>
-        <Link href={returnLink} className={style.returnContainer}>
-          <Image src="/assets/return.svg" alt="logo" width={24} height={24} />          
-        </Link>
+         <Image src="/assets/return.svg" alt="logo" width={24} height={24} onClick={() => router.back()} />  
         <Link href='/'>
           <Image src="/assets/logo-small.svg" alt="logo" width={37} height={37} />
         </Link>

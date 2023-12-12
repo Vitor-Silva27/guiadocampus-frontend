@@ -8,11 +8,11 @@ import { useFetch } from '@/services/useFetch';
 import { ISimpleSector } from '@/services/api/types/ISector';
 
 export default function Sectors() {
-  const { data } = useFetch<ISimpleSector[]>("http://localhost:3000/sectors");
+  const { data } = useFetch<ISimpleSector[]>(`https://guiadocampus-api.onrender.com/sectors`);
 
   return (
     <div className={styles.container}>
-      <HeaderWithReturn returnLink='./'/>
+      <HeaderWithReturn />
       <SearchBar text='Pesquisar por setor'/>
       <section className={styles.sectorsList}>
         {data ? (

@@ -12,11 +12,11 @@ import { SectorDescription } from '@/components/SectorDescription';
 
 export default function Sector({ params }: { params: { id: string } }) {
 
-  const {data} = useFetch<ISector>(`http://localhost:3000/sectors/${params.id}`);
+  const {data} = useFetch<ISector>(`https://guiadocampus-api.onrender.com/sectors/${params.id}`);
 
     return (
       <>
-        <HeaderWithReturn returnLink="/setores"/>
+        <HeaderWithReturn />
       {data && (
         <main>
         <div className={`${styles.section} ${styles.intro}`}>
@@ -56,10 +56,9 @@ export default function Sector({ params }: { params: { id: string } }) {
 
         {data.services.length > 0 && (
           <div className={styles.buttonContainer}>
-              <Cta text='Serviços e protocolos' link=''/>
+              <Cta text='Serviços e protocolos' link={`/servicos?setor=${params.id}`}/>
           </div>
         )}
-
         </main>
         )}
 

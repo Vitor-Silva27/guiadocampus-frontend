@@ -21,6 +21,7 @@
     text-decoration: none;
     color: var(--gray-800);
 }
+
 body {
     margin: 2rem;
     background-color: var(--gray-300);

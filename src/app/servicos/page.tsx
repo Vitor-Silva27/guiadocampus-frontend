@@ -7,12 +7,18 @@ import { HeaderWithReturn } from "@/components/HeaderWithReturn";
 import { SearchBar } from "@/components/SearchBar";
 import { Card } from "@/components/Card";
 
-export default function Services() {
-    const { data } = useFetch<IService[]>("http://localhost:3000/procedures");
-
+export default function Services({
+  searchParams
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined },
+}) {
+  const setor= searchParams;
+  const url = setor?.setor ? `https://guiadocampus-api.onrender.com/procedures/sector/${setor.setor}`: "https://guiadocampus-api.onrender.com/procedures";
+    const { data } = useFetch<IService[]>(url);
+    
     return (
       <div className={styles.container}>
-        <HeaderWithReturn returnLink='./'/>
+        <HeaderWithReturn />
         <SearchBar text='Pesquisar por serviço'/>
         <section className={styles.servicesList}>
           {data ? (
