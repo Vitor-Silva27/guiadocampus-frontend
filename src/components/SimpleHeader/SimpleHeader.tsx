@@ -12,7 +12,7 @@ export const SimpleHeader = () => {
   const Icon = icons[themeIcon]
   return (
     <header className={style.headerContainer}>
-        <Image src="assets/logo-small.svg" alt="logo" width={37} height={37} />
+        <Image src="/assets/logo-small.svg" alt="logo" width={37} height={37} />
         <div>
             <p className="body-text">Bem vindo(a) ao</p>
             <p className="subtitle-1">Guia do campus</p>
