@@ -9,6 +9,7 @@ import { Cta } from '@/components/Cta';
 import { useFetch } from '@/services/useFetch';
 import { ISector } from '@/services/api/types/ISector';
 import { SectorDescription } from '@/components/SectorDescription';
+import { Loading } from '@/components/Loading/Loading';
 
 export default function Sector({ params }: { params: { id: string } }) {
 
@@ -17,7 +18,7 @@ export default function Sector({ params }: { params: { id: string } }) {
     return (
       <>
         <HeaderWithReturn />
-      {data && (
+      {data ? (
         <main>
         <div className={`${styles.section} ${styles.intro}`}>
             <h1 className="title">{data?.name}</h1>
@@ -60,7 +61,7 @@ export default function Sector({ params }: { params: { id: string } }) {
           </div>
         )}
         </main>
-        )}
+        ) : <Loading />}
 
       </>
     );
