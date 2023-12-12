@@ -7,7 +7,7 @@ export const Contact = ({title, responsible, email,phone}: ISectorContacts) => {
     return (
       <div className={style.container}>
           <h3 className='subtitle-2'>{title}</h3>
-          <h4 className='body-text'>{responsible}</h4>
+          <h4 className='caption'>{responsible}</h4>
           <ul className={style.contactsDataWrapper}>
             {email && (
               <li>

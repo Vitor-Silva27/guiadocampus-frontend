@@ -9,3 +9,15 @@
     display: flex;
     align-items: center;
 }
+
+.theme {
+    width: 2rem;
+    height: 2rem;
+    stroke: var(--gray-500);
+}
+
+.arrow {
+    width: 2rem;
+    height: 2rem;
+    stroke: var(--text-mid-contrast);
+}

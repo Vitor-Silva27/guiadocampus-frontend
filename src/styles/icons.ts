@@ -4,7 +4,12 @@ import {
   RiRobot2Line,
   RiGraduationCapLine,
 } from "react-icons/ri";
-import { IoDocumentOutline, IoPersonOutline } from "react-icons/io5";
+import {
+  IoDocumentOutline,
+  IoPersonOutline,
+  IoSunnyOutline,
+  IoMoonOutline,
+} from "react-icons/io5";
 import { BsBook, BsCalendarCheck, BsClock } from "react-icons/bs";
 import { CiMap } from "react-icons/ci";
 import { PiBooks, PiPresentationLight } from "react-icons/pi";
@@ -23,4 +28,6 @@ export const icons: { [key: string]: IconType } = {
   class: SiGoogleclassroom,
   person: IoPersonOutline,
   presentation: PiPresentationLight,
+  sun: IoSunnyOutline,
+  moon: IoMoonOutline,
 };

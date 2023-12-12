@@ -4,16 +4,24 @@ import Image from "next/image";
 import style from './style.module.css';
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { icons } from "@/styles/icons";
+import { changeTheme } from "@/services/functions/changeTheme";
+import { IoArrowBack } from "react-icons/io5";
 
 export const HeaderWithReturn = () => {
   const router = useRouter();
+  const {resolvedTheme, handleTheme} = changeTheme();
+
+  const themeIcon = resolvedTheme === 'dark'? "sun": "moon";
+  const Theme = icons[themeIcon]
+
   return (
     <header className={style.headerContainer}>
-         <Image src="/assets/return.svg" alt="logo" width={24} height={24} onClick={() => router.back()} />  
+         <IoArrowBack className={style.arrow} onClick={() => router.back()} />  
         <Link href='/'>
           <Image src="/assets/logo-small.svg" alt="logo" width={37} height={37} />
         </Link>
-        <Image src="/assets/moon.svg" alt="moon" width={24} height={24}/>
+        <Theme className={style.theme} onClick={handleTheme}/>
     </header>
   )
 }

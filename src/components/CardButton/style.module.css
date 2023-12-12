@@ -1,7 +1,7 @@
 .container{
     width: 100%;
     height: 10rem;
-    background: var(--gray-100);
+    background: var(--card);
     border-radius: 1.25rem;
     display: flex;
     justify-content: center;
@@ -29,8 +29,8 @@
 .icon {
     height: 2.5rem;
     width: 2.5rem;
-    fill: var(--gray-600);
-    stroke: var(--gray-600);
+    fill: var(--text-mid-contrast);
+    stroke: var(--text-mid-contrast);
 }
 
 .main .icon {
