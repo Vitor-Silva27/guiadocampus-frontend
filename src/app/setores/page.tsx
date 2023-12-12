@@ -9,7 +9,7 @@ import { ISimpleSector } from '@/services/api/types/ISector';
 import { Loading } from '@/components/Loading/Loading';
 
 export default function Sectors() {
-  const { data } = useFetch<ISimpleSector[]>(`https://guiadocampus-api.onrender.com/sectors`);
+  const { data } = useFetch<ISimpleSector[]>(`sectors`);
 
   return (
     <div className={styles.container}>

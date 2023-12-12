@@ -13,7 +13,7 @@ import { Loading } from '@/components/Loading/Loading';
 
 export default function Sector({ params }: { params: { id: string } }) {
 
-  const {data} = useFetch<ISector>(`https://guiadocampus-api.onrender.com/sectors/${params.id}`);
+  const {data} = useFetch<ISector>(`sectors/${params.id}`);
 
     return (
       <>

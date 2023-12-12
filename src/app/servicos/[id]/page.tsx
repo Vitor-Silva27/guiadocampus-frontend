@@ -9,7 +9,7 @@ import { HeaderWithReturn } from "@/components/HeaderWithReturn";
 
 
 export default function Service({ params }: { params: { id: string } }) {
-  const {data} = useFetch<IService>(`http://localhost:3000/procedures/${params.id}`);
+  const {data} = useFetch<IService>(`procedures/${params.id}`);
     return (
       <>
        <HeaderWithReturn />

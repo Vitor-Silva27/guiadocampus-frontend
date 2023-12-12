@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 export const useFetch = <T>(url: string) => {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -7,7 +8,9 @@ export const useFetch = <T>(url: string) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(
+          "https://guiadocampus-api.onrender.com/" + url
+        );
 
         if (!response.ok) {
           throw new Error(

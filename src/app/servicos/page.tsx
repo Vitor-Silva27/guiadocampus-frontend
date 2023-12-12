@@ -13,7 +13,7 @@ export default function Services({
   searchParams?: { [key: string]: string | string[] | undefined },
 }) {
   const setor= searchParams;
-  const url = setor?.setor ? `https://guiadocampus-api.onrender.com/procedures/sector/${setor.setor}`: "https://guiadocampus-api.onrender.com/procedures";
+  const url = setor?.setor ? `procedures/sector/${setor.setor}`: "procedures";
     const { data } = useFetch<IService[]>(url);
     
     return (
