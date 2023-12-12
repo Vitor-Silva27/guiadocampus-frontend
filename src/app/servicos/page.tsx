@@ -6,6 +6,7 @@ import styles from './page.module.css';
 import { HeaderWithReturn } from "@/components/HeaderWithReturn";
 import { SearchBar } from "@/components/SearchBar";
 import { Card } from "@/components/Card";
+import { Loading } from "@/components/Loading/Loading";
 
 export default function Services({
   searchParams
@@ -19,14 +20,14 @@ export default function Services({
     return (
       <div className={styles.container}>
         <HeaderWithReturn />
-        <SearchBar text='Pesquisar por serviço'/>
+        <SearchBar text='Pesquisar por serviço' />
         <section className={styles.servicesList}>
           {data ? (
             data.map(servico => (
               <Card key={servico.id} icon={servico.icon} name={servico.title} id={servico.id} link="/servicos"/>
             ))
           ) : (
-            <p>Carregando...</p>
+             <Loading />
           )}
         </section>
       </div>

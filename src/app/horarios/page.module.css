@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.scheduleList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    margin-bottom: 10rem;
+}

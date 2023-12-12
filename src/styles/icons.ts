@@ -9,11 +9,14 @@ import {
   IoPersonOutline,
   IoSunnyOutline,
   IoMoonOutline,
+  IoCode,
 } from "react-icons/io5";
 import { BsBook, BsCalendarCheck, BsClock } from "react-icons/bs";
 import { CiMap } from "react-icons/ci";
-import { PiBooks, PiPresentationLight } from "react-icons/pi";
+import { PiBooks, PiPresentationLight, PiPlant } from "react-icons/pi";
 import { SiGoogleclassroom } from "react-icons/si";
+import { GrUserManager } from "react-icons/gr";
+import { MdOutlineFoodBank } from "react-icons/md";
 
 export const icons: { [key: string]: IconType } = {
   desktop: RiComputerLine,
@@ -30,4 +33,8 @@ export const icons: { [key: string]: IconType } = {
   presentation: PiPresentationLight,
   sun: IoSunnyOutline,
   moon: IoMoonOutline,
+  code: IoCode,
+  adm: GrUserManager,
+  food: MdOutlineFoodBank,
+  plant: PiPlant,
 };
