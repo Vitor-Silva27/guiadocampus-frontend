@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes';
 
-export const changeTheme = () => {
+export const useChangeTheme = () => {
   const {resolvedTheme, setTheme} = useTheme();
 
   const handleTheme = () => {

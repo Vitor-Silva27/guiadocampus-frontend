@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import style from './style.module.css';
-import { changeTheme } from "@/services/functions/changeTheme";
 import { icons } from "@/styles/icons";
+import { useChangeTheme } from "@/services/hooks/useChangeTheme";
 
 export const SimpleHeader = () => {
-  const {resolvedTheme, handleTheme} = changeTheme();
+  const {resolvedTheme, handleTheme} = useChangeTheme();
 
   const themeIcon = resolvedTheme === 'dark'? "sun": "moon";
   const Icon = icons[themeIcon]

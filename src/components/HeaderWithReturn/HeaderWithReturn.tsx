@@ -5,12 +5,12 @@ import style from './style.module.css';
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { icons } from "@/styles/icons";
-import { changeTheme } from "@/services/functions/changeTheme";
 import { IoArrowBack } from "react-icons/io5";
+import { useChangeTheme } from "@/services/hooks/useChangeTheme";
 
 export const HeaderWithReturn = () => {
   const router = useRouter();
-  const {resolvedTheme, handleTheme} = changeTheme();
+  const {resolvedTheme, handleTheme} = useChangeTheme();
 
   const themeIcon = resolvedTheme === 'dark'? "sun": "moon";
   const Theme = icons[themeIcon]
