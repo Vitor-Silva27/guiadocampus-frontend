@@ -28,7 +28,7 @@
     bottom: 0;
     left: 0;
     height: 8rem;
-    background-color: var(--gray-100);
+    background-color: var(--card);
     width: 100vw;
     display: flex;
     justify-content: center;
