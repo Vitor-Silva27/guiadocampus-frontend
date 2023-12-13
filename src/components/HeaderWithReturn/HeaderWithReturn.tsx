@@ -13,11 +13,20 @@ export const HeaderWithReturn = () => {
   const {resolvedTheme, handleTheme} = useChangeTheme();
 
   const themeIcon = resolvedTheme === 'dark'? "sun": "moon";
-  const Theme = icons[themeIcon]
+  const Theme = icons[themeIcon];
+
+  const handleReturn = () => {
+    if (window.history?.length) {
+      router.back();
+   } else {
+    router.push('/');
+   }
+  }
+
 
   return (
     <header className={style.headerContainer}>
-         <IoArrowBack className={style.arrow} onClick={() => router.back()} />  
+         <IoArrowBack className={style.arrow} onClick={handleReturn} />  
         <Link href='/'>
           <Image src="/assets/logo-small.svg" alt="logo" width={37} height={37} />
         </Link>
