@@ -25,9 +25,11 @@ export default function Sector({ params }: { params: { id: string } }) {
             <SectorDescription text={data.description}/>
         </div>
         <section className={`${styles.section}`}>
+          {data.infos.length > 0 && (
+          <>
             <h2 className="subtitle-1">Informações gerais</h2>
             <div className={styles.generalInfoList}>
-              {data.infos.length > 0 ? data.infos.map(info => (
+              {data.infos.map(info => (
                 <SimpleData.Root key={info.id}>
                   <SimpleData.Icon icon={info.icon} />
                   <SimpleData.DataWrapper>
@@ -35,8 +37,9 @@ export default function Sector({ params }: { params: { id: string } }) {
                     <SimpleData.Description text={info.description} />
                   </SimpleData.DataWrapper>
                 </SimpleData.Root>
-              )):  <p className={`body-text`}>Não possuimos informações sobre esse setor!</p>}
-            </div>
+              ))}
+              </div>
+              </>)}
         </section>
 
         <section className={`${styles.section}`}>

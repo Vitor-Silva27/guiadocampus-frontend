@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import style from './style.module.css';
 import { ISectorContacts } from '@/services/api/types/ISector';
 import { MdOutlineEmail, MdPhone} from 'react-icons/md';
@@ -20,7 +19,7 @@ export const Contact = ({title, responsible, email,phone}: ISectorContacts) => {
               {phone && (
               <li className={style.contactData}>
                   <MdPhone className={style.icon} />
-                  <p className={`body-text ${style.contactLink}`}>{phone}</p>
+                  <p className={`body-text ${style.phone}`}>{phone}</p>
               </li>
               )}
           </ul>
