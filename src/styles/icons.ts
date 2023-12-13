@@ -13,7 +13,12 @@ import {
 } from "react-icons/io5";
 import { BsBook, BsCalendarCheck, BsClock } from "react-icons/bs";
 import { CiMap } from "react-icons/ci";
-import { PiBooks, PiPresentationLight, PiPlant } from "react-icons/pi";
+import {
+  PiBooks,
+  PiPresentationLight,
+  PiPlant,
+  PiCertificateLight,
+} from "react-icons/pi";
 import { SiGoogleclassroom } from "react-icons/si";
 import { GrUserManager } from "react-icons/gr";
 import { MdOutlineFoodBank, MdOutlineCancel } from "react-icons/md";
@@ -38,4 +43,5 @@ export const icons: { [key: string]: IconType } = {
   food: MdOutlineFoodBank,
   plant: PiPlant,
   cancel: MdOutlineCancel,
+  certificate: PiCertificateLight,
 };
