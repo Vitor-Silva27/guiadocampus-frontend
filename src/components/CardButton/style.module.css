@@ -34,7 +34,8 @@
 }
 
 .main .icon {
-    fill: var(--gray-100)
+    fill: var(--gray-100);
+    stroke: var(--gray-100);
 }
 
 @media (min-width: 380px) {
