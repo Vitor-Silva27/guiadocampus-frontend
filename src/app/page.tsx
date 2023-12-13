@@ -17,7 +17,7 @@ export default function Home() {
       <SimpleHeader />
       <h1 className={`title ${styles.mainTitle}`}>Explore os setores do campus</h1>
       <Link href={"/pesquisa"}>
-        <SearchBar text='Pesquisar...' onSearch={() => {}}/>
+        <SearchBar text='Explore...' />
       </Link>
       {loading && <Loading />}
       {data && (<div className={styles.mainCardsContainer}>

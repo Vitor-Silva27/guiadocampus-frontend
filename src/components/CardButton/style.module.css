@@ -1,12 +1,12 @@
 .container{
+    display: flex;
+    flex: 1;
     width: 100%;
     height: 10rem;
     background: var(--card);
     border-radius: 1.25rem;
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
     padding: 1rem;
     min-width: 10rem;
 }
@@ -36,11 +36,4 @@
 .main .icon {
     fill: var(--gray-100);
     stroke: var(--gray-100);
-}
-
-@media (min-width: 380px) {
-    .container {
-        width: 10rem;
-        height: 10rem;
-    }
 }
