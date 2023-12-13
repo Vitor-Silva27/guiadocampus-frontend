@@ -1,6 +1,7 @@
 .icon {
     height: 2rem;
     width: 2rem;
+    min-width: 2rem;
     fill: var(--main-color-400);
     stroke: var(--main-color-400);
 }
