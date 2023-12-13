@@ -18,6 +18,7 @@ import {
   PiPresentationLight,
   PiPlant,
   PiCertificateLight,
+  PiStethoscope,
 } from "react-icons/pi";
 import { SiGoogleclassroom } from "react-icons/si";
 import { GrUserManager } from "react-icons/gr";
@@ -44,4 +45,5 @@ export const icons: { [key: string]: IconType } = {
   plant: PiPlant,
   cancel: MdOutlineCancel,
   certificate: PiCertificateLight,
+  health: PiStethoscope,
 };
