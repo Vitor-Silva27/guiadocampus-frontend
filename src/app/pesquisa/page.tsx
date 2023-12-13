@@ -61,7 +61,7 @@ export default function Pesquisa() {
 
     scheduleData?.forEach((schedule) => {
       newAllData.push({
-        title: schedule.course,
+        title: "Horário: " + schedule.course,
         icon: schedule.embed.icon,
         link: schedule.embed.link,
       });
