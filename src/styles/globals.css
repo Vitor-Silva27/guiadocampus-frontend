@@ -78,7 +78,7 @@ body {
 .subtitle-2 {
     font-size: 1.0625rem;
     font-weight: 400;
-    line-height: 120%; /* 1.275rem */
+    line-height: 150%;
 }
 
 .body-text {
