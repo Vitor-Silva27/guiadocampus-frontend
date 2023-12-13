@@ -7,6 +7,7 @@
     --gray-400: #C4C3D9;
     --gray-500: #6D6C76;
     --gray-600: #3C3B42;
+    --gray-700: #323138;
     --gray-800: #131212;
 
     --background: var(--gray-300);
@@ -15,6 +16,7 @@
 
     --text-high-contrast: var(--gray-800);
     --text-mid-contrast: var(--gray-600);
+    --text-low-contrast: var(--gray-400);
 }
 
 [data-theme="dark"] {
@@ -25,6 +27,7 @@
     --gray-400: #C4C3D9;
     --gray-500: #6D6C76;
     --gray-600: #3C3B42;
+    --gray-700: #323138;
     --gray-800: #131212;
 
 
@@ -34,6 +37,7 @@
 
     --text-high-contrast: var(--gray-100);
     --text-mid-contrast: var(--gray-400);
+    --text-low-contrast: var(--gray-700);
 
 }
 
