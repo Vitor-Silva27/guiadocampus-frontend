@@ -20,13 +20,13 @@ export const SearchBar = ({ text, onSearch }: SearchBarProps) => {
           className={style.searchInput}
           type='text'
           placeholder={text}
+          autoFocus
           onChange={handleSearch}
-        />: <input 
+        />: <div
           className={style.searchInput}
-          type='text'
-          placeholder={text}
-          disabled
-        />
+        >
+          Explorar
+        </div>
       }
       <div className={style.searchButton}>
         <Image src="assets/icone-pesquisa.svg" alt='search icon' width={24} height={24} />

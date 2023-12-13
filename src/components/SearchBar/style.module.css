@@ -12,6 +12,10 @@
     width: 100%;
     padding-left: 1.75rem;
     padding-right: 3.5rem;
+    font-size: 1.0625rem;
+    color: var(--text-mid-contrast);
+    display: flex;
+    align-items: center;
 }
 
 .searchInput:focus {
