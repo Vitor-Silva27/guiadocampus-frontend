@@ -55,7 +55,7 @@ export default function Pesquisa() {
       newAllData.push({
         title: service.title, 
         icon: service.icon,
-        link: "servico/" + service.id,
+        link: "servicos/" + service.id,
       });
     });
 
