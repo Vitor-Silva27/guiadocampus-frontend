@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { RiArrowRightSLine } from 'react-icons/ri';
 
@@ -26,6 +26,14 @@ export default function Pesquisa() {
 
   const [allData, setAllData] = useState<AllDataItem[]>([]);
   const [filteredData, setFilteredData] = useState<AllDataItem[]>([]);
+
+  const searchBarRef = useRef<HTMLInputElement | null>(null); 
+
+  useEffect(() => {
+    if (searchBarRef.current) {
+      searchBarRef.current.focus();
+    }
+  }, []);
 
   const handleSearch = (searchText: string) => {
     if (!searchText) {
@@ -79,7 +87,7 @@ export default function Pesquisa() {
       ) : (
         <>
           <div className={styles.searchBarContainer}>
-            <SearchBar text='pesquisar...' onSearch={handleSearch} />
+            <SearchBar text='pesquisar...' onSearch={handleSearch} inputRef={searchBarRef}/>
           </div>
           <section className={styles.servicesList}>
             <div className={styles.dataList}>
