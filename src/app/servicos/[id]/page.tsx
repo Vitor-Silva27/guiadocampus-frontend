@@ -4,8 +4,7 @@ import { IService } from "@/services/api/types/IService";
 import { useFetch } from "@/services/useFetch";
 import { ServiceDescription } from "./components/description";
 import styles from "./page.module.css";
-import { CardButton } from "@/components/CardButton";
-import { HeaderWithReturn } from "@/components/HeaderWithReturn";
+import { HeaderWithReturn, CardButton } from "@/components";
 
 
 export default function Service({ params }: { params: { id: string } }) {

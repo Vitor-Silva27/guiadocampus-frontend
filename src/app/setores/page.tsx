@@ -1,12 +1,10 @@
 "use client";
 
-import { HeaderWithReturn } from '@/components/HeaderWithReturn';
+
 import styles from './page.module.css';
-import { SearchBar } from '@/components/SearchBar';
-import { Card } from '@/components/Card';
 import { useFetch } from '@/services/useFetch';
 import { ISimpleSector } from '@/services/api/types/ISector';
-import { Loading } from '@/components/Loading/Loading';
+import { Card, HeaderWithReturn, Loading, SearchBar } from '@/components';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 

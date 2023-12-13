@@ -1,15 +1,11 @@
 "use client";
 
-import { IService } from "@/services/api/types/IService";
 import { useFetch } from "@/services/useFetch";
 import styles from './page.module.css';
-import { HeaderWithReturn } from "@/components/HeaderWithReturn";
-import { SearchBar } from "@/components/SearchBar";
-import { Loading } from "@/components/Loading/Loading";
-import { CardButton } from "@/components/CardButton";
 import { ISchedule } from "@/services/api/types/ISchedule";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { CardButton, HeaderWithReturn, Loading, SearchBar } from "@/components";
 
 export default function ClassesSchedule() {
     const { data, loading } = useFetch<ISchedule[]>('classes-schedule');

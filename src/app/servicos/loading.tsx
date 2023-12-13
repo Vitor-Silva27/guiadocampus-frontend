@@ -1,6 +1,5 @@
-import { SimpleHeader } from '@/components/SimpleHeader';
 import styles from './page.module.css'
-import { Loading } from '@/components/Loading/Loading';
+import { Loading, SimpleHeader } from '@/components';
 
 export default function servicesLoading() {
   return (

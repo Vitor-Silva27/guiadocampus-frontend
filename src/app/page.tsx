@@ -1,12 +1,9 @@
 "use client";
 
-import { SimpleHeader } from '@/components/SimpleHeader';
 import styles from './page.module.css'
-import { SearchBar } from '@/components/SearchBar';
-import { CardButton } from '@/components/CardButton';
 import { useFetch } from '@/services/useFetch';
 import { IMap } from '@/services/api/types/IMap';
-import { Loading } from '@/components/Loading/Loading';
+import { CardButton, Loading, SearchBar, SimpleHeader } from '@/components';
 import Link from 'next/link';
 
 export default function Home() {

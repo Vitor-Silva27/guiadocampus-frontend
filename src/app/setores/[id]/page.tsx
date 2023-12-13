@@ -1,15 +1,12 @@
 "use client";
 
-import { SimpleData } from '@/components/SimpleData';
 import styles from './page.module.css';
-import { HeaderWithReturn } from "@/components/HeaderWithReturn";
-import { Contact } from '@/components/Contact';
-import { CardButton } from '@/components/CardButton';
+
+import { CardButton, Contact, HeaderWithReturn, Loading, SectorDescription, SimpleData } from '@/components';
 import { Cta } from '@/components/Cta';
 import { useFetch } from '@/services/useFetch';
 import { ISector } from '@/services/api/types/ISector';
-import { SectorDescription } from '@/components/SectorDescription';
-import { Loading } from '@/components/Loading/Loading';
+
 
 export default function Sector({ params }: { params: { id: string } }) {
 

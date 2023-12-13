@@ -1,5 +1,4 @@
-import { SimpleHeader } from '@/components/SimpleHeader';
-import { Loading } from '@/components/Loading/Loading';
+import { Loading, SimpleHeader } from '@/components';
 
 export default function serviceLoading() {
   return (

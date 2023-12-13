@@ -7,12 +7,9 @@ import { useFetch } from "@/services/useFetch";
 import { ISimpleSector } from "@/services/api/types/ISector";
 import { IService } from "@/services/api/types/IService";
 import { ISchedule } from "@/services/api/types/ISchedule";
-import { HeaderWithReturn } from "@/components/HeaderWithReturn";
-import { SearchBar } from "@/components/SearchBar";
-import { Loading } from "@/components/Loading/Loading";
-import { SimpleData } from "@/components/SimpleData";
 import styles from "./page.module.css";
 import { motion } from "framer-motion";
+import { HeaderWithReturn, Loading, SearchBar, SimpleData } from "@/components";
 
 interface AllDataItem {
   title: string;
