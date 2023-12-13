@@ -8,6 +8,7 @@ import { useFetch } from '@/services/useFetch';
 import { ISimpleSector } from '@/services/api/types/ISector';
 import { Loading } from '@/components/Loading/Loading';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Sectors() {
   const { data, loading } = useFetch<ISimpleSector[]>(`sectors`);
@@ -38,8 +39,16 @@ export default function Sectors() {
       <SearchBar text='Pesquisar por setor' onSearch={handleSearch}/>
       <section className={styles.sectorsList}>
         {sectors && sectors.length > 0 ? (
-          sectors.map(setor => (
-            <Card key={setor.id} icon={setor.icon} name={setor.name} id={setor.id} link='/setores'/>
+          sectors.map((setor, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              exit={{opacity: 0, y: -20}}
+            >
+              <Card key={setor.id} icon={setor.icon} name={setor.name} id={setor.id} link='/setores'/>
+            </motion.div>
           ))
         ) : (
           <p className='subtitle-2'>Não há dados!</p>

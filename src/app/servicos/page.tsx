@@ -8,6 +8,7 @@ import { SearchBar } from "@/components/SearchBar";
 import { Card } from "@/components/Card";
 import { Loading } from "@/components/Loading/Loading";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Services({
   searchParams
@@ -46,8 +47,16 @@ export default function Services({
             <SearchBar text='Pesquisar por serviço' onSearch={handleSearch} />
             <section className={styles.servicesList}>
               {services && services.length > 0? (
-                services.map(servico => (
+                services.map((servico, index) => (
+                  <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  exit={{opacity: 0, y: -20}}
+                >
                   <Card key={servico.id} icon={servico.icon} name={servico.title} id={servico.id} link="/servicos"/>
+                </motion.div>
                 ))
               ) : (
                 <p className="subtitle-2">Não há dados!</p>

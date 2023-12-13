@@ -9,6 +9,7 @@ import { Loading } from "@/components/Loading/Loading";
 import { CardButton } from "@/components/CardButton";
 import { ISchedule } from "@/services/api/types/ISchedule";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ClassesSchedule() {
     const { data, loading } = useFetch<ISchedule[]>('classes-schedule');
@@ -41,8 +42,17 @@ export default function ClassesSchedule() {
           <SearchBar text='Pesquisar por turma' onSearch={handleSearch}/>
           <section className={styles.scheduleList}>
             {schedule && schedule.length > 0? (
-              schedule.map(schedule => (
+              schedule.map((schedule, index) => (
+                <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                exit={{ opacity: 0, y: -20 }}
+                className={styles.cardContainer}
+              >
                 <CardButton key={schedule.id} icon={schedule.embed.icon} title={schedule.course} link={schedule.embed.link}/>
+              </motion.div>
               ))
             ) : (
               <p className="subtitle-2">Não há dados!</p>
