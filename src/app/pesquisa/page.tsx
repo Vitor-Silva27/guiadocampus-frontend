@@ -27,14 +27,6 @@ export default function Pesquisa() {
   const [allData, setAllData] = useState<AllDataItem[]>([]);
   const [filteredData, setFilteredData] = useState<AllDataItem[]>([]);
 
-  const searchBarRef = useRef<HTMLInputElement | null>(null); 
-
-  useEffect(() => {
-    if (searchBarRef.current) {
-      searchBarRef.current.focus();
-    }
-  }, []);
-
   const handleSearch = (searchText: string) => {
     if (!searchText) {
       setFilteredData(allData);
@@ -87,7 +79,7 @@ export default function Pesquisa() {
       ) : (
         <>
           <div className={styles.searchBarContainer}>
-            <SearchBar text='pesquisar...' onSearch={handleSearch} inputRef={searchBarRef}/>
+            <SearchBar text='pesquisar...' onSearch={handleSearch} />
           </div>
           <section className={styles.servicesList}>
             <div className={styles.dataList}>
