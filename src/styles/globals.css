@@ -49,6 +49,7 @@
     margin: 0;
     text-decoration: none;
     color: var(--text-high-contrast);
+    transition: color, background-color 0.5s ease-out;
 }
 
 body {
