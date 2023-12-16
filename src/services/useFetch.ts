@@ -9,7 +9,7 @@ export const useFetch = <T>(url: string) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://guiadocampus-api.onrender.com/" + url
+          "https://guiadocampus-jln105qc.b4a.run/" + url
         );
 
         if (!response.ok) {
