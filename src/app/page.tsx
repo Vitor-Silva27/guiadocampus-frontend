@@ -7,7 +7,7 @@ import { CardButton, Loading, SearchBar, SimpleHeader } from '@/components';
 import Link from 'next/link';
 
 export default function Home() {
-  const { data, loading } = useFetch<IMap[]>(`map`);
+  const { data: mapData, loading: isFetchingMap } = useFetch<IMap[]>(`map`);
 
   return (
     <div className={styles.homeContainer}>
@@ -16,13 +16,15 @@ export default function Home() {
       <Link href={"/pesquisa"}>
         <SearchBar text='Explore...' />
       </Link>
-      {loading && <Loading />}
-      {data && (<div className={styles.mainCardsContainer}>
+      {isFetchingMap ? <Loading /> : null}
+      {mapData && (
+        <div className={styles.mainCardsContainer}>
           <CardButton link='/setores' title='Setores' icon='hat' main/>
           <CardButton link='/horarios' title='Horários' icon='clock'/>
-          <CardButton link={data[0].embed.link} title='Mapa' icon='map'/>
+          <CardButton link={mapData[0].embed.link} title='Mapa' icon='map'/>
           <CardButton link='/servicos' title='Serviços' icon='doc'/>
-      </div>)}
+        </div>
+      )}
     </div>
   );
 }

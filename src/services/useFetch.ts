@@ -5,28 +5,26 @@ export const useFetch = <T>(url: string) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://guiadocampus-jln105qc.b4a.run/" + url
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        `https://guiadocampus-jln105qc.b4a.run/${url}`
+      );
+      if (!response.ok) {
+        throw new Error(
+          `Erro na requisição: ${response.status} ${response.statusText}`
         );
-
-        if (!response.ok) {
-          throw new Error(
-            `Erro na requisição: ${response.status} ${response.statusText}`
-          );
-        }
-
-        const responseData: T = await response.json();
-        setData(responseData);
-      } catch (error) {
-        setError(`Erro na requisição`);
-      } finally {
-        setLoading(false);
       }
-    };
+      const responseData: T = await response.json();
+      setData(responseData);
+    } catch (error) {
+      setError(`Erro na requisição`);
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchData();
   }, [url]);
 

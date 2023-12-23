@@ -4,32 +4,34 @@ import style from './style.module.css';
 type SearchBarProps = {
   text: string;
   onSearch?: (searchText: string) => void;
+  focus?: boolean;
 }
 
-export const SearchBar = ({ text, onSearch }: SearchBarProps) => {
+export const SearchBar = ({ text, onSearch, focus }: SearchBarProps) => {
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchText = event.target.value;
-    if(onSearch)
+    if (onSearch) {
       onSearch(searchText);
+    }
   };
 
   return (
     <div className={style.searchContainer}>
-      {onSearch ?
+      {onSearch ? (
         <input
           className={style.searchInput}
-          type='text'
+          type="text"
           placeholder={text}
-          autoFocus
+          autoFocus={focus}
           onChange={handleSearch}
-        />: <div
-          className={style.searchInput}
-        >
+        />
+      ) : (
+        <div className={style.searchInput}>
           Explorar
         </div>
-      }
+      )}
       <div className={style.searchButton}>
-        <Image src="assets/icone-pesquisa.svg" alt='search icon' width={24} height={24} />
+        <Image src="assets/icone-pesquisa.svg" alt="search icon" width={24} height={24} />
       </div>
     </div>
   );

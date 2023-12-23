@@ -14,10 +14,12 @@
     width: 2rem;
     height: 2rem;
     stroke: var(--gray-500);
+    cursor: pointer;
 }
 
 .arrow {
     width: 2rem;
     height: 2rem;
     stroke: var(--text-mid-contrast);
+    cursor: pointer;
 }

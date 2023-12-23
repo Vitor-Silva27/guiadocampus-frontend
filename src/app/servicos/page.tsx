@@ -6,6 +6,7 @@ import styles from './page.module.css';
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Card, HeaderWithReturn, Loading, SearchBar } from "@/components";
+import { useSearch } from "@/services/hooks/useSearch";
 
 export default function Services({
   searchParams
@@ -16,24 +17,13 @@ export default function Services({
   const url = setor?.setor ? `procedures/sector/${setor.setor}`: "procedures";
     const { data, loading } = useFetch<IService[]>(url);
 
-    const [services, setServices] = useState<IService[]>();
+    const {filteredData, handleSearch, setFilteredData} = useSearch(data || []);
 
     useEffect(() => {
-      setServices(data || []);
-    }, [data])
-
-    const handleSearch = (searchText: string) => {
-      if (!searchText) {
-        setServices(data || []);
-        return;
+      if (data && data.length > 0) {
+        setFilteredData(data);
       }
-
-      const filtered = data?.filter(item =>
-        item.title.toLowerCase().includes(searchText.toLowerCase())
-      );
-
-      setServices(filtered);
-    };
+    }, [data]);
     
     return (
       <div className={styles.container}>
@@ -43,8 +33,8 @@ export default function Services({
           <>
             <SearchBar text='Pesquisar por serviço' onSearch={handleSearch} />
             <section className={styles.servicesList}>
-              {services && services.length > 0? (
-                services.map((servico, index) => (
+              {filteredData && filteredData.length > 0? (
+                filteredData.map((servico, index) => (
                   <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -52,7 +42,7 @@ export default function Services({
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   exit={{opacity: 0, y: -20}}
                 >
-                  <Card key={servico.id} icon={servico.icon} name={servico.title} id={servico.id} link="/servicos"/>
+                  <Card key={servico.id} icon={servico.icon} name={servico.title!} id={servico.id!} link="/servicos"/>
                 </motion.div>
                 ))
               ) : (
