@@ -1,12 +1,5 @@
 import { useState } from "react";
-
-interface ISearchItem {
-  id?: string;
-  title?: string;
-  name?: string;
-  icon: string;
-  link?: string;
-}
+import { ISearchItem } from "../api/types/ISearchItem";
 
 export const useSearch = (allData: ISearchItem[]) => {
   const [filteredData, setFilteredData] = useState<ISearchItem[]>(allData);
@@ -18,11 +11,13 @@ export const useSearch = (allData: ISearchItem[]) => {
     }
 
     const lowerCaseSearchText = searchText.toLowerCase();
-    const filteredData = allData.filter((item) =>
-      item.title
-        ? item.title.toLowerCase().includes(lowerCaseSearchText)
-        : item.name?.toLowerCase().includes(lowerCaseSearchText)
-    );
+    const filteredData = allData.filter(({ title, name, course }) => {
+      return (
+        (title && title.toLowerCase().includes(lowerCaseSearchText)) ||
+        (name && name.toLowerCase().includes(lowerCaseSearchText)) ||
+        (course && course.toLowerCase().includes(lowerCaseSearchText))
+      );
+    });
 
     setFilteredData(filteredData);
   };

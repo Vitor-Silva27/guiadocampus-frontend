@@ -4,13 +4,13 @@ import { icons } from '@/styles/icons';
 
 type CardButtonProps = {
     link: string;
-    icon: string;
+    icon?: string;
     title: string;
     main?: boolean;
 }
 
 export const CardButton = ({ link, title, icon, main }: CardButtonProps) => {
-  const Icon = icons[icon];
+  const Icon = icons[icon || ""] ;
   return (
     <Link className={`${style.container} ${main && style.main}`} href={link}>
             <div className={style.dataWrapper}>

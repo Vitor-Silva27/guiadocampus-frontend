@@ -42,7 +42,7 @@ export default function Services({
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   exit={{opacity: 0, y: -20}}
                 >
-                  <Card key={servico.id} icon={servico.icon} name={servico.title!} id={servico.id!} link="/servicos"/>
+                  <Card key={servico.id} icon={servico.icon!} name={servico.title!} id={servico.id!} link="/servicos"/>
                 </motion.div>
                 ))
               ) : (

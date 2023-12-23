@@ -40,7 +40,7 @@ export default function Pesquisa() {
         >
           <Link href={data.link!}>
             <SimpleData.Root>
-              <SimpleData.Icon icon={data.icon} />
+              <SimpleData.Icon icon={data.icon!} />
               <SimpleData.DataWrapper>
                 <SimpleData.Title text={data.title!} />
               </SimpleData.DataWrapper>
