@@ -35,7 +35,7 @@ export default function Sectors() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               exit={{opacity: 0, y: -20}}
             >
-              <Card key={setor.id} icon={setor.icon} name={setor.name!} id={setor.id!} link='/setores'/>
+              <Card key={setor.id} icon={setor.icon!} name={setor.name!} id={setor.id!} link='/setores'/>
             </motion.div>
           ))
         ) : (
