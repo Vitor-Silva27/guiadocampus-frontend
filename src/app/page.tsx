@@ -12,18 +12,18 @@ export default function Home() {
   return (
     <div className={styles.homeContainer}>
       <SimpleHeader />
+      {isFetchingMap ? <Loading /> : null}
+      {mapData && (<>
       <h1 className={`title ${styles.mainTitle}`}>Explore os setores do campus</h1>
       <Link href={"/pesquisa"}>
         <SearchBar text='Explore...' />
       </Link>
-      {isFetchingMap ? <Loading /> : null}
-      {mapData && (
         <div className={styles.mainCardsContainer}>
           <CardButton link='/setores' title='Setores' icon='hat' main/>
           <CardButton link='/horarios' title='Horários' icon='clock'/>
           <CardButton link={mapData[0].embed.link} title='Mapa' icon='map'/>
           <CardButton link='/servicos' title='Serviços' icon='doc'/>
-        </div>
+        </div></>
       )}
     </div>
   );
