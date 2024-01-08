@@ -12,7 +12,7 @@
     <br />
     <a href="https://guiadocampus.vercel.app/">View website</a>
     ·
-    <a href="https://guiadocampus-jln105qc.b4a.run">View Backend repo</a>
+    <a href="https://github.com/Vitor-Silva27/guiadocampus-backend">View Backend repo</a>
   </p>
 </div>
 
