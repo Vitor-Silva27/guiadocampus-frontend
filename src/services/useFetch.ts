@@ -7,9 +7,7 @@ export const useFetch = <T>(url: string) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(
-        `https://guiadocampus-jln105qc.b4a.run/${url}`
-      );
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API}${url}`);
       if (!response.ok) {
         throw new Error(
           `Erro na requisição: ${response.status} ${response.statusText}`
