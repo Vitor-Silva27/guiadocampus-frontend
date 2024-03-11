@@ -9,9 +9,6 @@
   <h3 align="center">Guia do campus</h3>
 
   <p align="center">
-    <br />
-    <a href="https://guiadocampus.vercel.app/">View website</a>
-    ·
     <a href="https://github.com/Vitor-Silva27/guiadocampus-backend">View Backend repo</a>
   </p>
 </div>
